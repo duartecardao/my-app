@@ -10,7 +10,7 @@ node {
     stage('Email Notification'){
         mail bcc: '', body: 'Jenkins jobs executed correctly.', cc: '', from: '', replyTo: '', subject: 'Pipeline executado correctamente', to: 'duarte.cardao@gmail.com'
     }
-    state('Slack Notification'){
+    stage('Slack Notification'){
         slackSend baseUrl: 'https://hooks.slack.com/services/',
          channel: '#general',
          color: 'good',
